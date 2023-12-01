@@ -1,0 +1,19 @@
+<div *ngIf="paisSelecionado">
+  <h4>{{ paisSelecionado.nome }}</h4>
+  <div>
+    <label><strong>Código ISO:</strong></label>
+    {{ paisSelecionado.codigoISO }}
+  </div>
+  <div>
+    <label><strong>Continente:</strong></label>
+    {{ paisSelecionado.continente }}
+  </div>
+  <div>
+    <label><strong>População:</strong></label>
+    {{ paisSelecionado.populacao }}
+  </div>
+  <div>
+    <label><strong>Data de Criação:</strong></label>
+    {{ paisSelecionado.dataCriacao }}
+  </div>
+</div>

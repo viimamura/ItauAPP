@@ -1,0 +1,42 @@
+<div>
+  <div class="form">
+    <div>
+      <form [formGroup]="formPais">
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" class="form-control" name="nome" placeholder="Ex: Brasil" formControlName="nome" />
+          <span class="text-danger" *ngIf="formPais.controls.nome.errors">
+            Campo texto obrigatório
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label>Código Internacional ISO</label>
+          <input class="form-control" name="codigoISO" placeholder="Ex: 55" formControlName="codigoISO" />
+          <span class="text-danger" *ngIf="formPais.controls.codigoISO.errors">
+            Campo texto obrigatório
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label>Continente</label>
+          <input class="form-control" name="continente" placeholder="Ex: América" formControlName="continente" />
+          <span class="text-danger" *ngIf="formPais.controls.continente.errors">
+            Campo texto obrigatório
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label>População</label>
+          <input class="form-control" type="number" name="populacao" placeholder="Ex: 201103330"
+            formControlName="populacao" />
+          <span class="text-danger" *ngIf="formPais.controls.populacao.errors">
+            Campo número obrigatório
+          </span>
+        </div>
+
+        <button (click)="adicionarPais()" class="btn btn-success" [disabled]="!formPais.valid">Adicionar</button>
+      </form>
+    </div>
+  </div>
+</div>
